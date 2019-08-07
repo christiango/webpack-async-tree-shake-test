@@ -2,6 +2,7 @@
   "name": "webpack-async-tree-shake-test",
   "description": "Test of webpack tree shaking on async chunks",
   "module": "lib/index.js",
+  "sideEffects": false,
   "scripts": {
     "build": "tsc",
     "bundle": "npm run build && webpack"
