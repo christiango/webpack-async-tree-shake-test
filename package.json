@@ -3,11 +3,13 @@
   "description": "Test of webpack tree shaking on async chunks",
   "module": "lib/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "bundle": "npm run build && webpack"
   },
   "dependencies": {},
   "devDependencies": {
     "typescript": "^3.5.3",
-    "webpack": "^4.25.1"
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   }
 }
