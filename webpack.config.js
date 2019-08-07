@@ -29,7 +29,11 @@ function createConfig(entryPath, outputSubfolder) {
  */
 const configs = [
   createConfig("./lib/basicExample/entry.js", "basicExample"),
-  createConfig("./lib/nestedFolders/entry.js", "nestedFolders")
+  createConfig("./lib/nestedFolders/entry.js", "nestedFolders"),
+  createConfig(
+    "./lib/nestedFoldersExportSideEffect/entry.js",
+    "nestedFoldersExportSideEffect"
+  )
 ];
 
 module.exports = configs;
