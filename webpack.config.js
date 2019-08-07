@@ -27,6 +27,9 @@ function createConfig(entryPath, outputSubfolder) {
 /**
  * @type {WebpackOptions[]}
  */
-const configs = [createConfig("./lib/basicExample/entry.js", "basicExample")];
+const configs = [
+  createConfig("./lib/basicExample/entry.js", "basicExample"),
+  createConfig("./lib/nestedFolders/entry.js", "nestedFolders")
+];
 
 module.exports = configs;
