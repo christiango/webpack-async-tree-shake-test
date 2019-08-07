@@ -33,6 +33,10 @@ const configs = [
   createConfig(
     "./lib/nestedFoldersExportSideEffect/entry.js",
     "nestedFoldersExportSideEffect"
+  ),
+  createConfig(
+    "./lib/nestedFoldersExportSideEffectUsedLazily/entry.js",
+    "nestedFoldersExportSideEffectUsedLazily"
   )
 ];
 
