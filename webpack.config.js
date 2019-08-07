@@ -6,18 +6,27 @@ const { resolve } = require("path");
  */
 
 /**
- * @type {WebpackOptions}
+ * @param {string} entryPath - The path to the entrypoint
+ *  @param {string} outputSubfolder - The subfolder to place the output in
+ * @returns {WebpackOptions}
  */
-const config = {
-  mode: "production",
-  entry: { boot: "./lib/entry.js" },
-  output: {
-    path: resolve(process.cwd(), "dist"),
-    libraryTarget: "var",
-    library: "[name]"
-  },
-  node: false,
-  devtool: "source-map"
-};
+function createConfig(entryPath, outputSubfolder) {
+  return {
+    mode: "production",
+    entry: { boot: entryPath },
+    output: {
+      path: resolve(process.cwd(), `dist/${outputSubfolder}`),
+      libraryTarget: "var",
+      library: "[name]"
+    },
+    node: false,
+    devtool: "source-map"
+  };
+}
 
-module.exports = config;
+/**
+ * @type {WebpackOptions[]}
+ */
+const configs = [createConfig("./lib/basicExample/entry.js", "basicExample")];
+
+module.exports = configs;
